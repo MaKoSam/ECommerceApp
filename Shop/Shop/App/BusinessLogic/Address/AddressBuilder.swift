@@ -35,31 +35,31 @@ class AddressBuilder: NSObject {
         return nil
     }
     
-    func buildWithDictionary(dictionary: [String: String]) -> Address?{
+    func buildAddressFromDictionary(dictionary: [String: String]) -> Address?{
         var address = makeAddress()
         
         if let country = dictionary["country"] {
-            address = addressUpdater.setCountryValue(country: country, forAdress: address)
+            address = addressUpdater.setCountry(country: country, for: address)
         }
         
         if let city = dictionary["city"] {
-            address = addressUpdater.setCityValue(city: city, forAdress: address)
+            address = addressUpdater.setCity(city: city, for: address)
         }
         
         if let line1 = dictionary["line1"] {
-            address = addressUpdater.setLine1Value(line: line1, forAdress: address)
+            address = addressUpdater.setLine1(line: line1, for: address)
         }
         
         if let line2 = dictionary["line2"] {
-            address = addressUpdater.setLine2Value(line: line2, forAdress: address)
+            address = addressUpdater.setLine2(line: line2, for: address)
         }
         
         if let house = dictionary["house"] {
-            address = addressUpdater.setHouseValue(house: house, forAdress: address)
+            address = addressUpdater.setHouse(house: house, for: address)
         }
         
         if let apartment = dictionary["apartment"] {
-            address = addressUpdater.setApartmentValue(apartment: apartment, forAdress: address)
+            address = addressUpdater.setApartment(apartment: apartment, for: address)
         }
         
         if(passSecurityCheck(address: address)){

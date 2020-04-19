@@ -18,6 +18,11 @@
 		04A24917244AEE960043C500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A24915244AEE960043C500 /* LaunchScreen.storyboard */; };
 		04A24922244AEE960043C500 /* ShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A24921244AEE960043C500 /* ShopTests.swift */; };
 		04A2492D244AEE960043C500 /* ShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2492C244AEE960043C500 /* ShopUITests.swift */; };
+		04BA2466244B48DC005939A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2465244B48DC005939A2 /* User.swift */; };
+		04BA2468244B49D2005939A2 /* DefaultUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2467244B49D2005939A2 /* DefaultUser.swift */; };
+		04BA246B244B4A55005939A2 /* UserBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA246A244B4A55005939A2 /* UserBuilder.swift */; };
+		04BA246D244B4C1F005939A2 /* UserUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA246C244B4C1F005939A2 /* UserUpdater.swift */; };
+		04BA2470244B52BE005939A2 /* UserSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA246F244B52BE005939A2 /* UserSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		04A24928244AEE960043C500 /* ShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A2492C244AEE960043C500 /* ShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopUITests.swift; sourceTree = "<group>"; };
 		04A2492E244AEE960043C500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04BA2465244B48DC005939A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		04BA2467244B49D2005939A2 /* DefaultUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUser.swift; sourceTree = "<group>"; };
+		04BA246A244B4A55005939A2 /* UserBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBuilder.swift; sourceTree = "<group>"; };
+		04BA246C244B4C1F005939A2 /* UserUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdater.swift; sourceTree = "<group>"; };
+		04BA246F244B52BE005939A2 /* UserSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +184,7 @@
 		04A2493B244AEF3D0043C500 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				04BA2469244B4A44005939A2 /* User */,
 				0423FC47244B18D80075E6A3 /* Address */,
 				0423FC41244B15A40075E6A3 /* Root Controller */,
 			);
@@ -229,6 +240,18 @@
 		04BA2464244B23AB005939A2 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				04BA2465244B48DC005939A2 /* User.swift */,
+				04BA2467244B49D2005939A2 /* DefaultUser.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		04BA2469244B4A44005939A2 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				04BA246A244B4A55005939A2 /* UserBuilder.swift */,
+				04BA246C244B4C1F005939A2 /* UserUpdater.swift */,
+				04BA246F244B52BE005939A2 /* UserSaver.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -365,8 +388,13 @@
 			files = (
 				0423FC49244B19040075E6A3 /* AddressBuilder.swift in Sources */,
 				0423FC46244B17950075E6A3 /* Address.swift in Sources */,
+				04BA246D244B4C1F005939A2 /* UserUpdater.swift in Sources */,
+				04BA2468244B49D2005939A2 /* DefaultUser.swift in Sources */,
 				0423FC50244B1F4E0075E6A3 /* AddressSaver.swift in Sources */,
+				04BA246B244B4A55005939A2 /* UserBuilder.swift in Sources */,
+				04BA2470244B52BE005939A2 /* UserSaver.swift in Sources */,
 				0423FC4B244B1B350075E6A3 /* DefaultAddress.swift in Sources */,
+				04BA2466244B48DC005939A2 /* User.swift in Sources */,
 				0423FC43244B15C90075E6A3 /* RootViewController.swift in Sources */,
 				0423FC4D244B1F330075E6A3 /* AddressUpdater.swift in Sources */,
 				04A2490B244AEE8D0043C500 /* AppDelegate.swift in Sources */,
