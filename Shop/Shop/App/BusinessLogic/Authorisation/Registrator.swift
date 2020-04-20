@@ -1,5 +1,5 @@
 //
-//  Authorizator.swift
+//  Registrator.swift
 //  Shop
 //
 //  Created by Sam Mazniker on 20/04/2020.
@@ -8,13 +8,13 @@
 
 import FirebaseAuth
 
-class Authorizator: NSObject {
+class Registrator: NSObject {
     private var username = ""
     private var password = ""
     
-    func signIn(with email: String, password: String, completionHandler: @escaping (Error?) -> Void){
+    func signUp(with email: String, and password: String, completionHandler: @escaping(Error?) -> Void){
         self.set(username: email, and: password)
-        self.loginAction(){ error in
+        self.registerAction(){ error in
             completionHandler(error)
         }
     }
@@ -24,10 +24,9 @@ class Authorizator: NSObject {
         self.password = password
     }
     
-    private func loginAction(completionHandler: @escaping (Error?) -> Void){
-        Auth.auth().signIn(withEmail: username, password: password) { (user, error) in
+    private func registerAction(completionHandler: @escaping(Error?) -> Void){
+        Auth.auth().createUser(withEmail: username, password: password){ (user, error) in
             completionHandler(error)
         }
     }
-
 }

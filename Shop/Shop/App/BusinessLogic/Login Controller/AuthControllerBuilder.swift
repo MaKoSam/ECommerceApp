@@ -57,7 +57,7 @@ class AuthControllerBuilder: NSObject {
             
             controller.emailField.topAnchor.constraint(equalTo: controller.view.topAnchor, constant: 50.0),
             controller.emailField.leadingAnchor.constraint(equalTo: controller.emailLabel.trailingAnchor, constant: 20.0),
-            controller.emailField.trailingAnchor.constraint(equalTo: controller.view.trailingAnchor, constant: 30.0),
+            controller.emailField.trailingAnchor.constraint(equalTo: controller.view.trailingAnchor, constant: -30.0),
             controller.emailField.heightAnchor.constraint(equalToConstant: 50.0),
             
             controller.passwordLabel.topAnchor.constraint(equalTo: controller.emailLabel.bottomAnchor, constant: 50.0),
@@ -67,12 +67,12 @@ class AuthControllerBuilder: NSObject {
             
             controller.passwordField.topAnchor.constraint(equalTo: controller.emailField.bottomAnchor, constant: 50.0),
             controller.passwordField.leadingAnchor.constraint(equalTo: controller.passwordLabel.trailingAnchor, constant: 20.0),
-            controller.passwordField.trailingAnchor.constraint(equalTo: controller.view.trailingAnchor, constant: 30.0),
+            controller.passwordField.trailingAnchor.constraint(equalTo: controller.view.trailingAnchor, constant: -30.0),
             controller.passwordField.heightAnchor.constraint(equalToConstant: 50.0),
             
             controller.signInButton.leadingAnchor.constraint(equalTo: controller.view.leadingAnchor, constant: 30.0),
-            controller.signInButton.trailingAnchor.constraint(equalTo: controller.view.trailingAnchor, constant: 30.0),
-            controller.signInButton.bottomAnchor.constraint(equalTo: controller.view.bottomAnchor, constant: 50.0),
+            controller.signInButton.trailingAnchor.constraint(equalTo: controller.view.trailingAnchor, constant: -30.0),
+            controller.signInButton.bottomAnchor.constraint(equalTo: controller.view.bottomAnchor, constant: -50.0),
             controller.signInButton.heightAnchor.constraint(equalToConstant: 50.0)
         ]
     }

@@ -12,6 +12,9 @@ class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let controllerBuilder = RegisterControllerBuilder()
+        var newController = controllerBuilder.buildDefaultController()
+        self.navigationController?.pushViewController(newController, animated: true)
 
         // Do any additional setup after loading the view.
     }
