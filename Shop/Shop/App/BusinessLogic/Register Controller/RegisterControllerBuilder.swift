@@ -17,6 +17,7 @@ class RegisterControllerBuilder: NSObject {
        }
        
     private func setUpViews(for controller: RegisterViewController) -> RegisterViewController{
+        controller.title = "Sign Up"
         controller.view.backgroundColor = UIColor.white
     
         controller.nameLabel.text = "Name:"
@@ -69,11 +70,15 @@ class RegisterControllerBuilder: NSObject {
         controller.passwordRepeatField.translatesAutoresizingMaskIntoConstraints = false
         controller.view.addSubview(controller.passwordRepeatField)
         
-        controller.registerButton.titleLabel?.text = "Register"
+        controller.registerButton.setTitle("Register", for: .normal)
+        controller.registerButton.setTitleColor(UIColor.white, for: .normal)
+        controller.registerButton.backgroundColor = UIColor.black
         controller.registerButton.translatesAutoresizingMaskIntoConstraints = false
         controller.view.addSubview(controller.registerButton)
         
-        controller.transferToLoginButton.titleLabel?.text = "Sign In"
+        controller.transferToLoginButton.setTitle("Sign In", for: .normal)
+        controller.transferToLoginButton.setTitleColor(UIColor.white, for: .normal)
+        controller.transferToLoginButton.backgroundColor = UIColor.black
         controller.transferToLoginButton.translatesAutoresizingMaskIntoConstraints = false
         controller.view.addSubview(controller.transferToLoginButton)
         
@@ -130,7 +135,7 @@ class RegisterControllerBuilder: NSObject {
             controller.transferToLoginLabel.leadingAnchor.constraint(equalTo: controller.view.leadingAnchor, constant: 30.0),
             controller.transferToLoginLabel.bottomAnchor.constraint(equalTo: controller.view.bottomAnchor, constant: -20.0),
             controller.transferToLoginLabel.heightAnchor.constraint(equalToConstant: 50.0),
-            controller.transferToLoginLabel.widthAnchor.constraint(equalToConstant: 100.0),
+            controller.transferToLoginLabel.widthAnchor.constraint(equalToConstant: 200.0),
             
             controller.transferToLoginButton.leadingAnchor.constraint(equalTo: controller.transferToLoginLabel.trailingAnchor, constant: 10.0),
             controller.transferToLoginButton.trailingAnchor.constraint(equalTo: controller.view.trailingAnchor, constant: -30.0),

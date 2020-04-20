@@ -71,7 +71,8 @@ extension RegisterViewController{
                                     self.present(alertController, animated: true, completion: nil)
                                 } else {
                                     print("Success Register")
-                                    //Successful register attempt action
+                                    //Отработка удачной регистрации
+                                    //Навигация до магазина
                                 }
                             }
                         }

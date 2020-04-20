@@ -42,7 +42,10 @@ class AuthControllerBuilder: NSObject {
         controller.passwordField.translatesAutoresizingMaskIntoConstraints = false
         controller.view.addSubview(controller.passwordField)
         
-        controller.signInButton.titleLabel?.text = "Login"
+        controller.signInButton.setTitle("Login", for: .normal)
+        controller.signInButton.backgroundColor = UIColor.black
+        controller.signInButton.setTitleColor(UIColor.white, for: .normal)
+        controller.signInButton.translatesAutoresizingMaskIntoConstraints = false
         controller.view.addSubview(controller.signInButton)
         
         return controller

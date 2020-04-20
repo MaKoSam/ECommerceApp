@@ -48,7 +48,8 @@ extension AuthViewController {
                         self.present(alertController, animated: true, completion: nil)
                     } else {
                         print("Success login")
-                        //Successful login attempt action
+                        //Отработка успешного входа
+                        //Навигация до магазина
                     }
                 }
             }
