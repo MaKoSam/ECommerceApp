@@ -10,10 +10,10 @@ import UIKit
 
 class AuthViewController: UIViewController {
     var emailField = UITextField()
-    var emailLabel = UILabel()
+//    var emailLabel = UILabel()
     
     var passwordField = UITextField()
-    var passwordLabel = UILabel()
+//    var passwordLabel = UILabel()
     
     var signInButton = UIButton()
     var constraints = [NSLayoutConstraint]()

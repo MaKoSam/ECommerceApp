@@ -9,16 +9,16 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-    var nameLabel = UILabel()
+//    var nameLabel = UILabel()
     var nameField = UITextField()
     
-    var emailLabel = UILabel()
+//    var emailLabel = UILabel()
     var emailField = UITextField()
     
-    var passwordLabel = UILabel()
+//    var passwordLabel = UILabel()
     var passwordField = UITextField()
     
-    var passwordRepeatLabel = UILabel()
+//    var passwordRepeatLabel = UILabel()
     var passwordRepeatField = UITextField()
     
     var registerButton = UIButton()
