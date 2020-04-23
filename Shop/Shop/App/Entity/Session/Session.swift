@@ -13,4 +13,8 @@ class Session {
     private init(){ }
     
     var translations = [String: String]()
+    
+    func isLoggedIn() -> Bool{
+        return false;
+    }
 }

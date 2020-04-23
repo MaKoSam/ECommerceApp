@@ -16,13 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         FirebaseApp.configure()
-        let requestTranslations = Translations()
-        Session.shared.translations = requestTranslations.getDefaultDictionary()
         
-        var navigationController = UINavigationController()
-        var newController = RootViewController()
-        navigationController.pushViewController(newController, animated: true)
-        window?.rootViewController = navigationController
+//        var navigationController = UINavigationController()
+//        var newController = RootViewController()
+//        navigationController.pushViewController(newController, animated: true)
+        window?.rootViewController = RootViewController()
         window?.makeKeyAndVisible()
         return true
     }
@@ -30,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 
-//So we can get RootViewController from any place
+//Get RootViewController from any place
 extension AppDelegate{
     static var shared: AppDelegate{
         return UIApplication.shared.delegate as! AppDelegate

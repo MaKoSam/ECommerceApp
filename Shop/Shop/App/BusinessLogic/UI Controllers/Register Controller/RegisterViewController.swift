@@ -71,8 +71,7 @@ extension RegisterViewController{
                                     self.present(alertController, animated: true, completion: nil)
                                 } else {
                                     print("Success Register")
-                                    //Отработка удачной регистрации
-                                    //Навигация до магазина
+                                    AppDelegate.shared.rootViewController.showMainBranch() //Навигация до магазина
                                 }
                             }
                         }

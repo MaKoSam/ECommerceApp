@@ -48,8 +48,7 @@ extension AuthViewController {
                         self.present(alertController, animated: true, completion: nil)
                     } else {
                         print("Success login")
-                        //Отработка успешного входа
-                        //Навигация до магазина
+                        AppDelegate.shared.rootViewController.showMainBranch() //Навигация до магазина
                     }
                 }
             }
