@@ -12,10 +12,12 @@ class LaunchHandler {
     
     func prepareForLaunch(completionHandler: @escaping() -> Void){
         
+        completionHandler()
+    }
+    
+    private func configureTranslations() {
         let requestTranslations = Translations()
         Session.shared.translations = requestTranslations.getDefaultDictionary()
-        
-        completionHandler()
     }
 
 }

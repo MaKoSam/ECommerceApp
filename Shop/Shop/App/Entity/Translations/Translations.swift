@@ -20,7 +20,6 @@ class Translations: NSObject {
     
     func getDefaultDictionary() -> [String: String]{
         let systemLang = Locale.preferredLanguages[0]
-        print(systemLang)
         switch systemLang {
         case "ru":
             return Russian.shared.getTranslations()
