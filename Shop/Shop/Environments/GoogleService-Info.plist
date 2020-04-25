@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>810495952629-6abmt51pa6585t92d8t3a8f2d7t8ofnd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.810495952629-6abmt51pa6585t92d8t3a8f2d7t8ofnd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyARBFVVRY0iF5zSMWiy0fA_ghJiC5ai-84</string>
+	<key>GCM_SENDER_ID</key>
+	<string>810495952629</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>SamMaKo.Shop</string>
+	<key>PROJECT_ID</key>
+	<string>gbshop-45106</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gbshop-45106.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:810495952629:ios:a8a9ffb4238c5f603427bc</string>
+	<key>DATABASE_URL</key>
+	<string>https://gbshop-45106.firebaseio.com</string>
+</dict>
+</plist>
