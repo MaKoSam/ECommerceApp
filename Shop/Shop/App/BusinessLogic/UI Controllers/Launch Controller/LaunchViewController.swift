@@ -15,6 +15,7 @@ class LaunchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.red
         let launcher = LaunchHandler()
         
         launcher.prepareForLaunch(){

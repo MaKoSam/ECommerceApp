@@ -12,9 +12,21 @@ class Session {
     static let shared = Session()
     private init(){ }
     
+    private var user = User()
+    
     var translations = [String: String]()
     
     func isLoggedIn() -> Bool{
-        return false;
+        let userBuilder = UserManager()
+        if let cacheUser = userBuilder.getUser(){
+            self.user = cacheUser
+            return true
+        }
+        
+        return false
+    }
+    
+    func setUser(_ user: User){
+        self.user = user
     }
 }

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class User: NSObject {
+class User: Codable {
     var username: String = ""
-    var name: String = ""
     var email: String = ""
-    var phone: String?
-    var address: Address?
+    var accessToken: String?
+    var refreshToken: String?
+    var expires: Int?
 }

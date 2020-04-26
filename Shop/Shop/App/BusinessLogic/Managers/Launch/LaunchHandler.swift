@@ -11,7 +11,7 @@ import UIKit
 class LaunchHandler {
     
     func prepareForLaunch(completionHandler: @escaping() -> Void){
-        
+        self.configureTranslations()
         completionHandler()
     }
     
