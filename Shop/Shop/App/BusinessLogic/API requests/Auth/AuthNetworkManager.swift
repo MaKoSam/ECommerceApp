@@ -9,17 +9,14 @@
 import Foundation
 import Alamofire
 
-class AuthNetworkManager{
+final class AuthNetworkManager {
     func signIn(with username: String, password: String, completionHandler: @escaping (User?) -> Void){
         let parameters = ["username": username,
                           "password": password]
-        
-        
         let request = AF.request("http://localhost:8080/auth/sign_in", method: .post, parameters: parameters)
         
         request.responseDecodable(of: User.self){ result in
             if result.error == nil {
-                print(result.value)
                 completionHandler(result.value)
             }
             completionHandler(nil)
@@ -34,7 +31,6 @@ class AuthNetworkManager{
         
         request.responseDecodable(of: User.self){ result in
             if result.error == nil {
-                print(result.value)
                 completionHandler(result.value)
             }
             completionHandler(nil)

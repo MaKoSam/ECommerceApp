@@ -38,6 +38,9 @@
 		04BA249724517B03005939A2 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA249624517B03005939A2 /* LaunchViewController.swift */; };
 		04BA249A24517C19005939A2 /* LaunchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA249924517C19005939A2 /* LaunchHandler.swift */; };
 		04BA249C24517D4C005939A2 /* LaunchControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA249B24517D4C005939A2 /* LaunchControllerBuilder.swift */; };
+		04D482892455DE2B00B7050D /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D482882455DE2B00B7050D /* ThemeManager.swift */; };
+		04D4828B2455DE3D00B7050D /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4828A2455DE3D00B7050D /* DefaultTheme.swift */; };
+		04D482902455EAE400B7050D /* UITheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4828F2455EAE400B7050D /* UITheme.swift */; };
 		3E6E58593A60548BC0C9AF77 /* Pods_ShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8FAED0CB2DAB5A9FFCB5DF /* Pods_ShopTests.framework */; };
 		6F3BD0B99DD8A680D2F3E73F /* Pods_Shop_ShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0CAABD98D010808B17FC25 /* Pods_Shop_ShopUITests.framework */; };
 		95493B4CD0E195B4ABD22CAD /* Pods_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485376158D638D929D48E356 /* Pods_Shop.framework */; };
@@ -98,6 +101,9 @@
 		04BA249624517B03005939A2 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		04BA249924517C19005939A2 /* LaunchHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchHandler.swift; sourceTree = "<group>"; };
 		04BA249B24517D4C005939A2 /* LaunchControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchControllerBuilder.swift; sourceTree = "<group>"; };
+		04D482882455DE2B00B7050D /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		04D4828A2455DE3D00B7050D /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
+		04D4828F2455EAE400B7050D /* UITheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITheme.swift; sourceTree = "<group>"; };
 		3F6847061D584E892EFC64F6 /* Pods-Shop-ShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop-ShopUITests.release.xcconfig"; path = "Target Support Files/Pods-Shop-ShopUITests/Pods-Shop-ShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		485376158D638D929D48E356 /* Pods_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0CAABD98D010808B17FC25 /* Pods_Shop_ShopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shop_ShopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +257,7 @@
 		04A2493C244AEF4D0043C500 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				04D482872455DE1200B7050D /* UI */,
 				04BA2487244F4535005939A2 /* Session */,
 				04BA2484244F3F2D005939A2 /* Translations */,
 				04BA2464244B23AB005939A2 /* User */,
@@ -396,9 +403,9 @@
 		04D482842455858200B7050D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				04D48285245585C300B7050D /* Registration */,
 				04BA249824517BF7005939A2 /* Launch */,
 				04BA247B244D9BC0005939A2 /* Authentication */,
+				04D48285245585C300B7050D /* Registration */,
 				04BA2469244B4A44005939A2 /* User */,
 				0423FC47244B18D80075E6A3 /* Address */,
 			);
@@ -420,6 +427,16 @@
 				04BA2473244B5BEB005939A2 /* Register Controller */,
 			);
 			path = "Auth Branch";
+			sourceTree = "<group>";
+		};
+		04D482872455DE1200B7050D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				04D482882455DE2B00B7050D /* ThemeManager.swift */,
+				04D4828F2455EAE400B7050D /* UITheme.swift */,
+				04D4828A2455DE3D00B7050D /* DefaultTheme.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		178A4009B812E409409AF968 /* Frameworks */ = {
@@ -691,6 +708,7 @@
 				04BA249C24517D4C005939A2 /* LaunchControllerBuilder.swift in Sources */,
 				0423FC50244B1F4E0075E6A3 /* AddressSaver.swift in Sources */,
 				04BA247A244CA035005939A2 /* AuthControllerBuilder.swift in Sources */,
+				04D482892455DE2B00B7050D /* ThemeManager.swift in Sources */,
 				04BA248E24502D44005939A2 /* Russian.swift in Sources */,
 				04BA246B244B4A55005939A2 /* UserManager.swift in Sources */,
 				04BA2470244B52BE005939A2 /* UserSaver.swift in Sources */,
@@ -698,12 +716,14 @@
 				04BA2486244F3F47005939A2 /* Translations.swift in Sources */,
 				04BA247D244D9C05005939A2 /* Authorizator.swift in Sources */,
 				047BF0B924549149008BB525 /* AuthNetworkManager.swift in Sources */,
+				04D482902455EAE400B7050D /* UITheme.swift in Sources */,
 				04BA2481244DA69C005939A2 /* RegisterControllerBuilder.swift in Sources */,
 				04BA249A24517C19005939A2 /* LaunchHandler.swift in Sources */,
 				0423FC4B244B1B350075E6A3 /* DefaultAddress.swift in Sources */,
 				04BA2478244C943D005939A2 /* AuthViewController.swift in Sources */,
 				04BA247F244DA3CE005939A2 /* RegisterViewController.swift in Sources */,
 				04BA2466244B48DC005939A2 /* User.swift in Sources */,
+				04D4828B2455DE3D00B7050D /* DefaultTheme.swift in Sources */,
 				0423FC43244B15C90075E6A3 /* RootViewController.swift in Sources */,
 				0423FC4D244B1F330075E6A3 /* AddressUpdater.swift in Sources */,
 				04BA248B24502D2C005939A2 /* English.swift in Sources */,

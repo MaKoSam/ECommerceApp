@@ -6,18 +6,24 @@
 //  Copyright © 2020 Sam Mazniker. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class LaunchHandler {
-    
+final class LaunchHandler {
     func prepareForLaunch(completionHandler: @escaping() -> Void){
         self.configureTranslations()
+        self.configureUITheme()
         completionHandler()
+    }
+    
+    private func configureUITheme() {
+        let themeManager = ThemeManager()
+        let theme = themeManager.getDefaultTheme()
+        Session.shared.theme = theme
     }
     
     private func configureTranslations() {
         let requestTranslations = Translations()
-        Session.shared.translations = requestTranslations.getDefaultDictionary()
+        let language = Locale.preferredLanguages[0]
+        Session.shared.translations = requestTranslations.requestDictionary(for: language)
     }
-
 }

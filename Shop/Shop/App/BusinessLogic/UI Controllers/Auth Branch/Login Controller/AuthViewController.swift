@@ -9,15 +9,24 @@
 import UIKit
 
 class AuthViewController: UIViewController {
-    var emailField = UITextField()
+    var headline = UILabel()
+    
+    var usernameView = UIView()
+    var passwordView = UIView()
+    
+    var usernameLabel = UILabel()
+    var passwordLabel = UILabel()
+    
+    var usernameField = UITextField()
     var passwordField = UITextField()
     
     var signInButton = UIButton()
+    
     var constraints = [NSLayoutConstraint]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
-        emailField.addTarget(self, action: #selector(startEditingField(_:)), for: .allTouchEvents)
+        usernameField.addTarget(self, action: #selector(startEditingField(_:)), for: .allTouchEvents)
         passwordField.addTarget(self, action: #selector(startEditingField(_:)), for: .allTouchEvents)
         signInButton.addTarget(self, action: #selector(tryLogin(_:)), for: .touchUpInside)
         NSLayoutConstraint.activate(constraints)
@@ -28,9 +37,6 @@ class AuthViewController: UIViewController {
     }
 }
 
-
-
-
 extension AuthViewController {
     @objc func startEditingField(_ sender: UITextField){
         sender.text = nil
@@ -38,7 +44,7 @@ extension AuthViewController {
     
     @objc func tryLogin(_ sender: AnyObject){
         let authorize = Authorizator()
-        guard let username = self.emailField.text,
+        guard let username = self.usernameField.text,
             let password = self.passwordField.text else {
                 showError()
                 return

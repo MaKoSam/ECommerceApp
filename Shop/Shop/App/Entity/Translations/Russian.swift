@@ -18,8 +18,8 @@ class Russian {
     
     private init(){
         //Register & Login & User
-        dictionary.updateValue("Зарегистрируйтесь", forKey: "signUpLabel")
-        dictionary.updateValue("Войдите в свой аккаунт", forKey: "signInLabel")
+        dictionary.updateValue("Регистрация", forKey: "signUp")
+        dictionary.updateValue("Вход", forKey: "signIn")
         dictionary.updateValue("Зарегистрироваться", forKey: "signUpBut")
         dictionary.updateValue("Войти", forKey: "signInBut")
         
@@ -28,10 +28,10 @@ class Russian {
         dictionary.updateValue("Уже есть аккаунт?", forKey: "transferToSignIn")
         dictionary.updateValue("Войти.", forKey: "transferToSignInBut")
         
-        dictionary.updateValue("Ваше имя", forKey: "name")
-        dictionary.updateValue("Ваша почта", forKey: "email")
+        dictionary.updateValue("Логин", forKey: "name")
+        dictionary.updateValue("Почта", forKey: "email")
         dictionary.updateValue("Пароль", forKey: "password")
-        dictionary.updateValue("Пароль еще раз", forKey: "passwordRep")
+        dictionary.updateValue("Пароль еще раз", forKey: "passwordRepeat")
         
         //User address
         dictionary.updateValue("Адрес доставки", forKey: "address")

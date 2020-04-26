@@ -18,8 +18,8 @@ class English {
     
     private init() {
         //Register & Login & User
-        dictionary.updateValue("Create your account", forKey: "signUpLabel")
-        dictionary.updateValue("Log into your account", forKey: "signInLabel")
+        dictionary.updateValue("Register", forKey: "signUp")
+        dictionary.updateValue("Sign in", forKey: "signIn")
         dictionary.updateValue("Sign Up", forKey: "signUpBut")
         dictionary.updateValue("Log In", forKey: "signInBut")
         
@@ -28,10 +28,10 @@ class English {
         dictionary.updateValue("Already have account?", forKey: "transferToSignIn")
         dictionary.updateValue("Sign In.", forKey: "transferToSignInBut")
         
-        dictionary.updateValue("Your name", forKey: "name")
+        dictionary.updateValue("Name", forKey: "name")
         dictionary.updateValue("Email", forKey: "email")
         dictionary.updateValue("Password", forKey: "password")
-        dictionary.updateValue("Password again", forKey: "passwordRep")
+        dictionary.updateValue("Password Again", forKey: "passwordRepeat")
         
         //User address
         dictionary.updateValue("Delivery Address", forKey: "address")

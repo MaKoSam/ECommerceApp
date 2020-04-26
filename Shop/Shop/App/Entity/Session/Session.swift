@@ -13,7 +13,7 @@ class Session {
     private init(){ }
     
     private var user = User()
-    
+    var theme: UITheme = DefaultTheme()
     var translations = [String: String]()
     
     func isLoggedIn() -> Bool{
@@ -22,7 +22,6 @@ class Session {
             self.user = cacheUser
             return true
         }
-        
         return false
     }
     

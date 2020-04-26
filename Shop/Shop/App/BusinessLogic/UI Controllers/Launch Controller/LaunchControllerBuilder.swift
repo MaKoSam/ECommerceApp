@@ -10,7 +10,7 @@ import UIKit
 
 class LaunchControllerBuilder: NSObject {
     func buildDefaultController() -> LaunchViewController{
-        var controller = LaunchViewController()
+        let controller = LaunchViewController()
         return controller
     }
 }

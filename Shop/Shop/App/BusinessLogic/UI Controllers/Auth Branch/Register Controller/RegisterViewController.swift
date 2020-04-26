@@ -9,7 +9,19 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-    var nameField = UITextField()
+    var headline = UILabel()
+    
+    var usernameView = UIView()
+    var emailView = UIView()
+    var passwordView = UIView()
+    var passwordRepeatView = UIView()
+    
+    var usernameLabel = UILabel()
+    var emailLabel = UILabel()
+    var passwordLabel = UILabel()
+    var passwordRepeatLabel = UILabel()
+    
+    var usernameField = UITextField()
     var emailField = UITextField()
     var passwordField = UITextField()
     var passwordRepeatField = UITextField()
@@ -23,7 +35,7 @@ class RegisterViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        nameField.addTarget(self, action: #selector(startEditingField(_:)), for: .allTouchEvents)
+        usernameField.addTarget(self, action: #selector(startEditingField(_:)), for: .allTouchEvents)
         emailField.addTarget(self, action: #selector(startEditingField(_:)), for: .allTouchEvents)
         passwordField.addTarget(self, action: #selector(startEditingField(_:)), for: .allTouchEvents)
         passwordRepeatField.addTarget(self, action: #selector(startEditingField(_:)), for: .allTouchEvents)
@@ -31,15 +43,26 @@ class RegisterViewController: UIViewController {
         registerButton.addTarget(self, action: #selector(tryRegister(_:)), for: .touchUpInside)
         transferToLoginButton.addTarget(self, action: #selector(navigateToLoginPage(_:)), for: .touchUpInside)
         NSLayoutConstraint.activate(constraints)
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(endEditTap(sender:)))
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(UIResponder.keyboardWillShowNotification)
+        NotificationCenter.default.removeObserver(UIResponder.keyboardWillHideNotification)
+        NotificationCenter.default.removeObserver(UIResponder.keyboardWillChangeFrameNotification)
     }
     
 }
-
-
 
 
 extension RegisterViewController{
@@ -49,7 +72,7 @@ extension RegisterViewController{
     
     @objc func tryRegister(_ sender: UIButton){
         let registrator = Registrator()
-        guard let username = self.nameField.text,
+        guard let username = self.usernameField.text,
             let passwordOne = self.passwordField.text,
             let passwordTwo = self.passwordRepeatField.text,
             let email = self.emailField.text else {
@@ -101,5 +124,26 @@ extension RegisterViewController{
     @objc func navigateToLoginPage(_ sender: UIButton){
         let controllerBuiled = AuthControllerBuilder()
         self.navigationController?.pushViewController(controllerBuiled.buildDefaultController(), animated: true)
+    }
+}
+
+//Keyboard events
+extension RegisterViewController {
+    @objc func endEditTap(sender: Any){
+        self.usernameField.endEditing(true)
+        self.emailField.endEditing(true)
+        self.passwordField.endEditing(true)
+        self.passwordRepeatField.endEditing(true)
+    }
+    
+    @objc func keyboardWillChange(notification: Notification){
+        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification{
+            self.view.frame.origin.y = -keyboardRect.height
+        } else {
+            self.view.frame.origin.y = 0
+        }
     }
 }

@@ -6,9 +6,9 @@
 //  Copyright © 2020 Sam Mazniker. All rights reserved.
 //
 
-import FirebaseAuth
+import Foundation
 
-class Registrator {
+final class Registrator {
     private let networkConnection = AuthNetworkManager()
     
     func signUp(with username: String, password: String, email: String, completionHandler: @escaping(User?) -> Void){
