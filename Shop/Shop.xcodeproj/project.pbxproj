@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,17 +13,34 @@
 		0423FC4B244B1B350075E6A3 /* DefaultAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423FC4A244B1B350075E6A3 /* DefaultAddress.swift */; };
 		0423FC4D244B1F330075E6A3 /* AddressUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423FC4C244B1F330075E6A3 /* AddressUpdater.swift */; };
 		0423FC50244B1F4E0075E6A3 /* AddressSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423FC4F244B1F4E0075E6A3 /* AddressSaver.swift */; };
+		047BF0B924549149008BB525 /* AuthNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BF0B824549149008BB525 /* AuthNetworkManager.swift */; };
 		04A2490B244AEE8D0043C500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2490A244AEE8D0043C500 /* AppDelegate.swift */; };
 		04A24914244AEE960043C500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A24913244AEE960043C500 /* Assets.xcassets */; };
 		04A24917244AEE960043C500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A24915244AEE960043C500 /* LaunchScreen.storyboard */; };
 		04A24922244AEE960043C500 /* ShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A24921244AEE960043C500 /* ShopTests.swift */; };
 		04A2492D244AEE960043C500 /* ShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2492C244AEE960043C500 /* ShopUITests.swift */; };
 		04BA2466244B48DC005939A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2465244B48DC005939A2 /* User.swift */; };
-		04BA2468244B49D2005939A2 /* DefaultUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2467244B49D2005939A2 /* DefaultUser.swift */; };
-		04BA246B244B4A55005939A2 /* UserBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA246A244B4A55005939A2 /* UserBuilder.swift */; };
-		04BA246D244B4C1F005939A2 /* UserUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA246C244B4C1F005939A2 /* UserUpdater.swift */; };
+		04BA246B244B4A55005939A2 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA246A244B4A55005939A2 /* UserManager.swift */; };
 		04BA2470244B52BE005939A2 /* UserSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA246F244B52BE005939A2 /* UserSaver.swift */; };
 		04BA2476244C3987005939A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04BA2475244C3987005939A2 /* GoogleService-Info.plist */; };
+		04BA2478244C943D005939A2 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2477244C943D005939A2 /* AuthViewController.swift */; };
+		04BA247A244CA035005939A2 /* AuthControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2479244CA035005939A2 /* AuthControllerBuilder.swift */; };
+		04BA247D244D9C05005939A2 /* Authorizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA247C244D9C05005939A2 /* Authorizator.swift */; };
+		04BA247F244DA3CE005939A2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA247E244DA3CE005939A2 /* RegisterViewController.swift */; };
+		04BA2481244DA69C005939A2 /* RegisterControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2480244DA69C005939A2 /* RegisterControllerBuilder.swift */; };
+		04BA2483244DACB2005939A2 /* Registrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2482244DACB2005939A2 /* Registrator.swift */; };
+		04BA2486244F3F47005939A2 /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2485244F3F47005939A2 /* Translations.swift */; };
+		04BA2489244F4547005939A2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2488244F4547005939A2 /* Session.swift */; };
+		04BA248B24502D2C005939A2 /* English.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA248A24502D2C005939A2 /* English.swift */; };
+		04BA248E24502D44005939A2 /* Russian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA248D24502D44005939A2 /* Russian.swift */; };
+		04BA24902450413F005939A2 /* testAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA248F2450413F005939A2 /* testAuth.swift */; };
+		04BA24922450453C005939A2 /* testReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA24912450453C005939A2 /* testReg.swift */; };
+		04BA249724517B03005939A2 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA249624517B03005939A2 /* LaunchViewController.swift */; };
+		04BA249A24517C19005939A2 /* LaunchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA249924517C19005939A2 /* LaunchHandler.swift */; };
+		04BA249C24517D4C005939A2 /* LaunchControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA249B24517D4C005939A2 /* LaunchControllerBuilder.swift */; };
+		04D482892455DE2B00B7050D /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D482882455DE2B00B7050D /* ThemeManager.swift */; };
+		04D4828B2455DE3D00B7050D /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4828A2455DE3D00B7050D /* DefaultTheme.swift */; };
+		04D482902455EAE400B7050D /* UITheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4828F2455EAE400B7050D /* UITheme.swift */; };
 		3E6E58593A60548BC0C9AF77 /* Pods_ShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8FAED0CB2DAB5A9FFCB5DF /* Pods_ShopTests.framework */; };
 		6F3BD0B99DD8A680D2F3E73F /* Pods_Shop_ShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0CAABD98D010808B17FC25 /* Pods_Shop_ShopUITests.framework */; };
 		95493B4CD0E195B4ABD22CAD /* Pods_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485376158D638D929D48E356 /* Pods_Shop.framework */; };
@@ -53,6 +70,7 @@
 		0423FC4A244B1B350075E6A3 /* DefaultAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAddress.swift; sourceTree = "<group>"; };
 		0423FC4C244B1F330075E6A3 /* AddressUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressUpdater.swift; sourceTree = "<group>"; };
 		0423FC4F244B1F4E0075E6A3 /* AddressSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSaver.swift; sourceTree = "<group>"; };
+		047BF0B824549149008BB525 /* AuthNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkManager.swift; sourceTree = "<group>"; };
 		04A24907244AEE8D0043C500 /* Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A2490A244AEE8D0043C500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A24913244AEE960043C500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,11 +83,27 @@
 		04A2492C244AEE960043C500 /* ShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopUITests.swift; sourceTree = "<group>"; };
 		04A2492E244AEE960043C500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04BA2465244B48DC005939A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		04BA2467244B49D2005939A2 /* DefaultUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUser.swift; sourceTree = "<group>"; };
-		04BA246A244B4A55005939A2 /* UserBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBuilder.swift; sourceTree = "<group>"; };
-		04BA246C244B4C1F005939A2 /* UserUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdater.swift; sourceTree = "<group>"; };
+		04BA246A244B4A55005939A2 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		04BA246F244B52BE005939A2 /* UserSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSaver.swift; sourceTree = "<group>"; };
 		04BA2475244C3987005939A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04BA2477244C943D005939A2 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		04BA2479244CA035005939A2 /* AuthControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthControllerBuilder.swift; sourceTree = "<group>"; };
+		04BA247C244D9C05005939A2 /* Authorizator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorizator.swift; sourceTree = "<group>"; };
+		04BA247E244DA3CE005939A2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		04BA2480244DA69C005939A2 /* RegisterControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterControllerBuilder.swift; sourceTree = "<group>"; };
+		04BA2482244DACB2005939A2 /* Registrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrator.swift; sourceTree = "<group>"; };
+		04BA2485244F3F47005939A2 /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
+		04BA2488244F4547005939A2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		04BA248A24502D2C005939A2 /* English.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = English.swift; sourceTree = "<group>"; };
+		04BA248D24502D44005939A2 /* Russian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Russian.swift; sourceTree = "<group>"; };
+		04BA248F2450413F005939A2 /* testAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAuth.swift; sourceTree = "<group>"; };
+		04BA24912450453C005939A2 /* testReg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testReg.swift; sourceTree = "<group>"; };
+		04BA249624517B03005939A2 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		04BA249924517C19005939A2 /* LaunchHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchHandler.swift; sourceTree = "<group>"; };
+		04BA249B24517D4C005939A2 /* LaunchControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchControllerBuilder.swift; sourceTree = "<group>"; };
+		04D482882455DE2B00B7050D /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		04D4828A2455DE3D00B7050D /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
+		04D4828F2455EAE400B7050D /* UITheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITheme.swift; sourceTree = "<group>"; };
 		3F6847061D584E892EFC64F6 /* Pods-Shop-ShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop-ShopUITests.release.xcconfig"; path = "Target Support Files/Pods-Shop-ShopUITests/Pods-Shop-ShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		485376158D638D929D48E356 /* Pods_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0CAABD98D010808B17FC25 /* Pods_Shop_ShopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shop_ShopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +170,14 @@
 			path = Address;
 			sourceTree = "<group>";
 		};
+		047BF0B724547CC0008BB525 /* API requests */ = {
+			isa = PBXGroup;
+			children = (
+				04D482832455840900B7050D /* Auth */,
+			);
+			path = "API requests";
+			sourceTree = "<group>";
+		};
 		04A248FE244AEE8D0043C500 = {
 			isa = PBXGroup;
 			children = (
@@ -161,11 +203,11 @@
 		04A24909244AEE8D0043C500 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				04A24918244AEE960043C500 /* Info.plist */,
 				04A2493A244AEF350043C500 /* App */,
 				04A2493F244AEF9F0043C500 /* Core */,
 				04A24940244AEFAA0043C500 /* Resources */,
 				04A24941244AEFED0043C500 /* Environments */,
-				04A24918244AEE960043C500 /* Info.plist */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -173,6 +215,8 @@
 		04A24920244AEE960043C500 /* ShopTests */ = {
 			isa = PBXGroup;
 			children = (
+				04BA24912450453C005939A2 /* testReg.swift */,
+				04BA248F2450413F005939A2 /* testAuth.swift */,
 				04A24921244AEE960043C500 /* ShopTests.swift */,
 				04A24923244AEE960043C500 /* Info.plist */,
 			);
@@ -203,13 +247,9 @@
 		04A2493B244AEF3D0043C500 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
-				04BA2474244B5C0C005939A2 /* User Edit Controller */,
-				04BA2473244B5BEB005939A2 /* Register Controller */,
-				04BA2472244B5BDC005939A2 /* Login Controller */,
-				04BA2471244B5BC7005939A2 /* Launch Controller */,
-				0423FC41244B15A40075E6A3 /* Root Controller */,
-				04BA2469244B4A44005939A2 /* User */,
-				0423FC47244B18D80075E6A3 /* Address */,
+				04D482842455858200B7050D /* Managers */,
+				047BF0B724547CC0008BB525 /* API requests */,
+				04BA24942450483A005939A2 /* UI Controllers */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -217,6 +257,9 @@
 		04A2493C244AEF4D0043C500 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				04D482872455DE1200B7050D /* UI */,
+				04BA2487244F4535005939A2 /* Session */,
+				04BA2484244F3F2D005939A2 /* Translations */,
 				04BA2464244B23AB005939A2 /* User */,
 				0423FC44244B16C40075E6A3 /* Address */,
 			);
@@ -265,7 +308,6 @@
 			isa = PBXGroup;
 			children = (
 				04BA2465244B48DC005939A2 /* User.swift */,
-				04BA2467244B49D2005939A2 /* DefaultUser.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -273,23 +315,17 @@
 		04BA2469244B4A44005939A2 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				04BA246A244B4A55005939A2 /* UserBuilder.swift */,
-				04BA246C244B4C1F005939A2 /* UserUpdater.swift */,
+				04BA246A244B4A55005939A2 /* UserManager.swift */,
 				04BA246F244B52BE005939A2 /* UserSaver.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
 		};
-		04BA2471244B5BC7005939A2 /* Launch Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Launch Controller";
-			sourceTree = "<group>";
-		};
 		04BA2472244B5BDC005939A2 /* Login Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04BA2477244C943D005939A2 /* AuthViewController.swift */,
+				04BA2479244CA035005939A2 /* AuthControllerBuilder.swift */,
 			);
 			path = "Login Controller";
 			sourceTree = "<group>";
@@ -297,15 +333,110 @@
 		04BA2473244B5BEB005939A2 /* Register Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04BA247E244DA3CE005939A2 /* RegisterViewController.swift */,
+				04BA2480244DA69C005939A2 /* RegisterControllerBuilder.swift */,
 			);
 			path = "Register Controller";
 			sourceTree = "<group>";
 		};
-		04BA2474244B5C0C005939A2 /* User Edit Controller */ = {
+		04BA247B244D9BC0005939A2 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				04BA247C244D9C05005939A2 /* Authorizator.swift */,
 			);
-			path = "User Edit Controller";
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		04BA2484244F3F2D005939A2 /* Translations */ = {
+			isa = PBXGroup;
+			children = (
+				04BA2485244F3F47005939A2 /* Translations.swift */,
+				04BA248A24502D2C005939A2 /* English.swift */,
+				04BA248D24502D44005939A2 /* Russian.swift */,
+			);
+			path = Translations;
+			sourceTree = "<group>";
+		};
+		04BA2487244F4535005939A2 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				04BA2488244F4547005939A2 /* Session.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		04BA24942450483A005939A2 /* UI Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0423FC41244B15A40075E6A3 /* Root Controller */,
+				04BA249524517AE4005939A2 /* Launch Controller */,
+				04D48286245585F700B7050D /* Auth Branch */,
+			);
+			path = "UI Controllers";
+			sourceTree = "<group>";
+		};
+		04BA249524517AE4005939A2 /* Launch Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04BA249624517B03005939A2 /* LaunchViewController.swift */,
+				04BA249B24517D4C005939A2 /* LaunchControllerBuilder.swift */,
+			);
+			path = "Launch Controller";
+			sourceTree = "<group>";
+		};
+		04BA249824517BF7005939A2 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				04BA249924517C19005939A2 /* LaunchHandler.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		04D482832455840900B7050D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				047BF0B824549149008BB525 /* AuthNetworkManager.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		04D482842455858200B7050D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				04BA249824517BF7005939A2 /* Launch */,
+				04BA247B244D9BC0005939A2 /* Authentication */,
+				04D48285245585C300B7050D /* Registration */,
+				04BA2469244B4A44005939A2 /* User */,
+				0423FC47244B18D80075E6A3 /* Address */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		04D48285245585C300B7050D /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				04BA2482244DACB2005939A2 /* Registrator.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		04D48286245585F700B7050D /* Auth Branch */ = {
+			isa = PBXGroup;
+			children = (
+				04BA2472244B5BDC005939A2 /* Login Controller */,
+				04BA2473244B5BEB005939A2 /* Register Controller */,
+			);
+			path = "Auth Branch";
+			sourceTree = "<group>";
+		};
+		04D482872455DE1200B7050D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				04D482882455DE2B00B7050D /* ThemeManager.swift */,
+				04D4828F2455EAE400B7050D /* UITheme.swift */,
+				04D4828A2455DE3D00B7050D /* DefaultTheme.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		178A4009B812E409409AF968 /* Frameworks */ = {
@@ -328,7 +459,6 @@
 				B8FD32E4130D3FCDD48D01F9 /* Pods-ShopTests.debug.xcconfig */,
 				A394979550867FDB1FF515E3 /* Pods-ShopTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -571,17 +701,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BA2489244F4547005939A2 /* Session.swift in Sources */,
 				0423FC49244B19040075E6A3 /* AddressBuilder.swift in Sources */,
 				0423FC46244B17950075E6A3 /* Address.swift in Sources */,
-				04BA246D244B4C1F005939A2 /* UserUpdater.swift in Sources */,
-				04BA2468244B49D2005939A2 /* DefaultUser.swift in Sources */,
+				04BA249724517B03005939A2 /* LaunchViewController.swift in Sources */,
+				04BA249C24517D4C005939A2 /* LaunchControllerBuilder.swift in Sources */,
 				0423FC50244B1F4E0075E6A3 /* AddressSaver.swift in Sources */,
-				04BA246B244B4A55005939A2 /* UserBuilder.swift in Sources */,
+				04BA247A244CA035005939A2 /* AuthControllerBuilder.swift in Sources */,
+				04D482892455DE2B00B7050D /* ThemeManager.swift in Sources */,
+				04BA248E24502D44005939A2 /* Russian.swift in Sources */,
+				04BA246B244B4A55005939A2 /* UserManager.swift in Sources */,
 				04BA2470244B52BE005939A2 /* UserSaver.swift in Sources */,
+				04BA2483244DACB2005939A2 /* Registrator.swift in Sources */,
+				04BA2486244F3F47005939A2 /* Translations.swift in Sources */,
+				04BA247D244D9C05005939A2 /* Authorizator.swift in Sources */,
+				047BF0B924549149008BB525 /* AuthNetworkManager.swift in Sources */,
+				04D482902455EAE400B7050D /* UITheme.swift in Sources */,
+				04BA2481244DA69C005939A2 /* RegisterControllerBuilder.swift in Sources */,
+				04BA249A24517C19005939A2 /* LaunchHandler.swift in Sources */,
 				0423FC4B244B1B350075E6A3 /* DefaultAddress.swift in Sources */,
+				04BA2478244C943D005939A2 /* AuthViewController.swift in Sources */,
+				04BA247F244DA3CE005939A2 /* RegisterViewController.swift in Sources */,
 				04BA2466244B48DC005939A2 /* User.swift in Sources */,
+				04D4828B2455DE3D00B7050D /* DefaultTheme.swift in Sources */,
 				0423FC43244B15C90075E6A3 /* RootViewController.swift in Sources */,
 				0423FC4D244B1F330075E6A3 /* AddressUpdater.swift in Sources */,
+				04BA248B24502D2C005939A2 /* English.swift in Sources */,
 				04A2490B244AEE8D0043C500 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,6 +736,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A24922244AEE960043C500 /* ShopTests.swift in Sources */,
+				04BA24902450413F005939A2 /* testAuth.swift in Sources */,
+				04BA24922450453C005939A2 /* testReg.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
