@@ -16,13 +16,17 @@ class Session {
     var theme: UITheme = DefaultTheme()
     var translations = [String: String]()
     
-    func isLoggedIn() -> Bool{
+    func needAuth() -> Bool{
         let userBuilder = UserManager()
         if let cacheUser = userBuilder.getUser(){
             self.user = cacheUser
-            return true
+            return false
         }
-        return false
+        return true
+    }
+    
+    func accessToken() -> String {
+        return user.accessToken
     }
     
     func setUser(_ user: User){

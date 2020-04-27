@@ -48,7 +48,7 @@ class RootViewController: UIViewController {
     }
     
     func showMainBranch() {
-        let new = UINavigationController(rootViewController: UIViewController())
+        let new = UINavigationController(rootViewController: ShopViewController())
         
         addChild(new)
         new.view.frame = view.bounds

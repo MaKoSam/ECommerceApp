@@ -11,19 +11,15 @@ import RealmSwift
 
 final class UserSaver {
     func getUser() -> User? {
-        do {
-            let realm = try! Realm()
-            let user = realm.objects(User.self).first
-            return user
-        } catch {
-            return nil
-        }
+        let realm = try! Realm()
+        let user = realm.objects(User.self).first
+        return user
     }
     
     func saveUser(user: User) {
         do {
             let realm = try! Realm()
-            print(realm.configuration.fileURL)
+            print(realm.configuration.fileURL as Any)
             try realm.write {
                 realm.deleteAll()
                 realm.add(user)

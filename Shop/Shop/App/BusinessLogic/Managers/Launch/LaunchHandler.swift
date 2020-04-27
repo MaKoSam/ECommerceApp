@@ -12,7 +12,9 @@ final class LaunchHandler {
     func prepareForLaunch(completionHandler: @escaping() -> Void){
         self.configureTranslations()
         self.configureUITheme()
-        completionHandler()
+        ShopItemManager.shared.requestShopItems(page: 1){
+            completionHandler()
+        }
     }
     
     private func configureUITheme() {

@@ -12,23 +12,22 @@ import UIKit
 
 class LaunchViewController: UIViewController {
     var activityIndicator = UIActivityIndicatorView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.red
         let launcher = LaunchHandler()
         
-        launcher.prepareForLaunch(){
-            DispatchQueue.main.async{
-                
-                self.activityIndicator.stopAnimating()
-                if Session.shared.isLoggedIn() {
+        if Session.shared.needAuth() {
+            AppDelegate.shared.rootViewController.showLoginBranch()
+        } else {
+            launcher.prepareForLaunch(){
+                DispatchQueue.main.async{
+                    self.activityIndicator.stopAnimating()
                     AppDelegate.shared.rootViewController.showMainBranch()
-                } else {
-                    AppDelegate.shared.rootViewController.showLoginBranch()
                 }
-                
             }
         }
+        
     }
 }

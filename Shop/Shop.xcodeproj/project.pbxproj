@@ -13,6 +13,8 @@
 		0423FC4B244B1B350075E6A3 /* DefaultAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423FC4A244B1B350075E6A3 /* DefaultAddress.swift */; };
 		0423FC4D244B1F330075E6A3 /* AddressUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423FC4C244B1F330075E6A3 /* AddressUpdater.swift */; };
 		0423FC50244B1F4E0075E6A3 /* AddressSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423FC4F244B1F4E0075E6A3 /* AddressSaver.swift */; };
+		046647EC2457325800F330D6 /* ShopItemNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046647EB2457325800F330D6 /* ShopItemNetworkManager.swift */; };
+		046647EF245736D900F330D6 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046647EE245736D900F330D6 /* ShopViewController.swift */; };
 		047BF0B924549149008BB525 /* AuthNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BF0B824549149008BB525 /* AuthNetworkManager.swift */; };
 		04A2490B244AEE8D0043C500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2490A244AEE8D0043C500 /* AppDelegate.swift */; };
 		04A24914244AEE960043C500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A24913244AEE960043C500 /* Assets.xcassets */; };
@@ -38,6 +40,11 @@
 		04BA249724517B03005939A2 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA249624517B03005939A2 /* LaunchViewController.swift */; };
 		04BA249A24517C19005939A2 /* LaunchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA249924517C19005939A2 /* LaunchHandler.swift */; };
 		04BA249C24517D4C005939A2 /* LaunchControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA249B24517D4C005939A2 /* LaunchControllerBuilder.swift */; };
+		04D072602456F87000DDA4B1 /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0725F2456F87000DDA4B1 /* ShopItem.swift */; };
+		04D072622456F91300DDA4B1 /* ShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D072612456F91300DDA4B1 /* ShopCart.swift */; };
+		04D072652456F9EC00DDA4B1 /* ShopCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D072642456F9EC00DDA4B1 /* ShopCartManager.swift */; };
+		04D072672457006A00DDA4B1 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D072662457006A00DDA4B1 /* CartItem.swift */; };
+		04D0726B2457016900DDA4B1 /* ShopItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0726A2457016900DDA4B1 /* ShopItemManager.swift */; };
 		04D482892455DE2B00B7050D /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D482882455DE2B00B7050D /* ThemeManager.swift */; };
 		04D4828B2455DE3D00B7050D /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4828A2455DE3D00B7050D /* DefaultTheme.swift */; };
 		04D482902455EAE400B7050D /* UITheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4828F2455EAE400B7050D /* UITheme.swift */; };
@@ -70,6 +77,8 @@
 		0423FC4A244B1B350075E6A3 /* DefaultAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAddress.swift; sourceTree = "<group>"; };
 		0423FC4C244B1F330075E6A3 /* AddressUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressUpdater.swift; sourceTree = "<group>"; };
 		0423FC4F244B1F4E0075E6A3 /* AddressSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSaver.swift; sourceTree = "<group>"; };
+		046647EB2457325800F330D6 /* ShopItemNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemNetworkManager.swift; sourceTree = "<group>"; };
+		046647EE245736D900F330D6 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		047BF0B824549149008BB525 /* AuthNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkManager.swift; sourceTree = "<group>"; };
 		04A24907244AEE8D0043C500 /* Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A2490A244AEE8D0043C500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +110,11 @@
 		04BA249624517B03005939A2 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		04BA249924517C19005939A2 /* LaunchHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchHandler.swift; sourceTree = "<group>"; };
 		04BA249B24517D4C005939A2 /* LaunchControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchControllerBuilder.swift; sourceTree = "<group>"; };
+		04D0725F2456F87000DDA4B1 /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
+		04D072612456F91300DDA4B1 /* ShopCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCart.swift; sourceTree = "<group>"; };
+		04D072642456F9EC00DDA4B1 /* ShopCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartManager.swift; sourceTree = "<group>"; };
+		04D072662457006A00DDA4B1 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		04D0726A2457016900DDA4B1 /* ShopItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemManager.swift; sourceTree = "<group>"; };
 		04D482882455DE2B00B7050D /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		04D4828A2455DE3D00B7050D /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
 		04D4828F2455EAE400B7050D /* UITheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITheme.swift; sourceTree = "<group>"; };
@@ -170,9 +184,26 @@
 			path = Address;
 			sourceTree = "<group>";
 		};
+		046647EA2457323300F330D6 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				046647EB2457325800F330D6 /* ShopItemNetworkManager.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		046647ED2457369C00F330D6 /* Shop Branch */ = {
+			isa = PBXGroup;
+			children = (
+				046647EE245736D900F330D6 /* ShopViewController.swift */,
+			);
+			path = "Shop Branch";
+			sourceTree = "<group>";
+		};
 		047BF0B724547CC0008BB525 /* API requests */ = {
 			isa = PBXGroup;
 			children = (
+				046647EA2457323300F330D6 /* Shop */,
 				04D482832455840900B7050D /* Auth */,
 			);
 			path = "API requests";
@@ -257,11 +288,10 @@
 		04A2493C244AEF4D0043C500 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				04D482872455DE1200B7050D /* UI */,
 				04BA2487244F4535005939A2 /* Session */,
-				04BA2484244F3F2D005939A2 /* Translations */,
+				04D0725A2456F4BE00DDA4B1 /* Configurators */,
 				04BA2464244B23AB005939A2 /* User */,
-				0423FC44244B16C40075E6A3 /* Address */,
+				04D072592456F4A700DDA4B1 /* Shop */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -307,7 +337,9 @@
 		04BA2464244B23AB005939A2 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				04BA2465244B48DC005939A2 /* User.swift */,
+				04D0725B2456F4EB00DDA4B1 /* User */,
+				04D0725C2456F4FC00DDA4B1 /* Info */,
+				0423FC44244B16C40075E6A3 /* Address */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -371,6 +403,7 @@
 				0423FC41244B15A40075E6A3 /* Root Controller */,
 				04BA249524517AE4005939A2 /* Launch Controller */,
 				04D48286245585F700B7050D /* Auth Branch */,
+				046647ED2457369C00F330D6 /* Shop Branch */,
 			);
 			path = "UI Controllers";
 			sourceTree = "<group>";
@@ -392,6 +425,81 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
+		04D072592456F4A700DDA4B1 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				04D0725D2456F52200DDA4B1 /* Item */,
+				04D0725E2456F53400DDA4B1 /* Cart */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		04D0725A2456F4BE00DDA4B1 /* Configurators */ = {
+			isa = PBXGroup;
+			children = (
+				04D482872455DE1200B7050D /* UI */,
+				04BA2484244F3F2D005939A2 /* Translations */,
+			);
+			path = Configurators;
+			sourceTree = "<group>";
+		};
+		04D0725B2456F4EB00DDA4B1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				04BA2465244B48DC005939A2 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		04D0725C2456F4FC00DDA4B1 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		04D0725D2456F52200DDA4B1 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				04D0725F2456F87000DDA4B1 /* ShopItem.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		04D0725E2456F53400DDA4B1 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				04D072612456F91300DDA4B1 /* ShopCart.swift */,
+				04D072662457006A00DDA4B1 /* CartItem.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		04D072632456F9C300DDA4B1 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				04D072692457012200DDA4B1 /* Item */,
+				04D072682457010600DDA4B1 /* Cart */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		04D072682457010600DDA4B1 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				04D072642456F9EC00DDA4B1 /* ShopCartManager.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		04D072692457012200DDA4B1 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				04D0726A2457016900DDA4B1 /* ShopItemManager.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
 		04D482832455840900B7050D /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +516,7 @@
 				04D48285245585C300B7050D /* Registration */,
 				04BA2469244B4A44005939A2 /* User */,
 				0423FC47244B18D80075E6A3 /* Address */,
+				04D072632456F9C300DDA4B1 /* Shop */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -703,9 +812,13 @@
 			files = (
 				04BA2489244F4547005939A2 /* Session.swift in Sources */,
 				0423FC49244B19040075E6A3 /* AddressBuilder.swift in Sources */,
+				04D072602456F87000DDA4B1 /* ShopItem.swift in Sources */,
 				0423FC46244B17950075E6A3 /* Address.swift in Sources */,
+				046647EF245736D900F330D6 /* ShopViewController.swift in Sources */,
 				04BA249724517B03005939A2 /* LaunchViewController.swift in Sources */,
+				04D072652456F9EC00DDA4B1 /* ShopCartManager.swift in Sources */,
 				04BA249C24517D4C005939A2 /* LaunchControllerBuilder.swift in Sources */,
+				04D072622456F91300DDA4B1 /* ShopCart.swift in Sources */,
 				0423FC50244B1F4E0075E6A3 /* AddressSaver.swift in Sources */,
 				04BA247A244CA035005939A2 /* AuthControllerBuilder.swift in Sources */,
 				04D482892455DE2B00B7050D /* ThemeManager.swift in Sources */,
@@ -714,9 +827,11 @@
 				04BA2470244B52BE005939A2 /* UserSaver.swift in Sources */,
 				04BA2483244DACB2005939A2 /* Registrator.swift in Sources */,
 				04BA2486244F3F47005939A2 /* Translations.swift in Sources */,
+				04D072672457006A00DDA4B1 /* CartItem.swift in Sources */,
 				04BA247D244D9C05005939A2 /* Authorizator.swift in Sources */,
 				047BF0B924549149008BB525 /* AuthNetworkManager.swift in Sources */,
 				04D482902455EAE400B7050D /* UITheme.swift in Sources */,
+				04D0726B2457016900DDA4B1 /* ShopItemManager.swift in Sources */,
 				04BA2481244DA69C005939A2 /* RegisterControllerBuilder.swift in Sources */,
 				04BA249A24517C19005939A2 /* LaunchHandler.swift in Sources */,
 				0423FC4B244B1B350075E6A3 /* DefaultAddress.swift in Sources */,
@@ -724,6 +839,7 @@
 				04BA247F244DA3CE005939A2 /* RegisterViewController.swift in Sources */,
 				04BA2466244B48DC005939A2 /* User.swift in Sources */,
 				04D4828B2455DE3D00B7050D /* DefaultTheme.swift in Sources */,
+				046647EC2457325800F330D6 /* ShopItemNetworkManager.swift in Sources */,
 				0423FC43244B15C90075E6A3 /* RootViewController.swift in Sources */,
 				0423FC4D244B1F330075E6A3 /* AddressUpdater.swift in Sources */,
 				04BA248B24502D2C005939A2 /* English.swift in Sources */,
