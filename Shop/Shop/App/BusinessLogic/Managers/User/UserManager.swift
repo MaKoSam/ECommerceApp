@@ -12,7 +12,7 @@ final class UserManager {
     private let saver = UserSaver()
     
     func getUser() -> User? {
-        if let user = saver.getUserFromCache(){
+        if let user = saver.getUser(){
             return user
         } else {
             return nil
@@ -20,7 +20,11 @@ final class UserManager {
     }
     
     func saveUser(user: User) {
-        saver.saveUserToCache(user: user)
+        saver.saveUser(user: user)
+    }
+    
+    func logout(){
+        saver.deleteUser()
     }
     
     private func makeUser() -> User{

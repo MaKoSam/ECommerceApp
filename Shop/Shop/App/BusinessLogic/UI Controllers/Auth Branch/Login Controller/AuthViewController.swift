@@ -34,9 +34,22 @@ class AuthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(endEditTap(sender:)))
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(UIResponder.keyboardWillShowNotification)
+        NotificationCenter.default.removeObserver(UIResponder.keyboardWillHideNotification)
+        NotificationCenter.default.removeObserver(UIResponder.keyboardWillChangeFrameNotification)
     }
 }
 
+//Auth Actions
 extension AuthViewController {
     @objc func startEditingField(_ sender: UITextField){
         sender.text = nil
@@ -69,7 +82,7 @@ extension AuthViewController {
     private func showError(error: Error? = nil){
         var errorMessage: String?
         if error == nil {
-            errorMessage = "Username doesn't exist or password is wrong."
+            errorMessage = "Пользователь несуществует или введен неправильный пароль."
         } else {
             errorMessage = error?.localizedDescription
         }
@@ -78,5 +91,23 @@ extension AuthViewController {
         alertController.addAction(defaultAction)
         self.present(alertController, animated: true, completion: nil)
     }
+}
+
+//Keyboard Actions
+extension AuthViewController {
+    @objc func endEditTap(sender: Any){
+        self.usernameField.endEditing(true)
+        self.passwordField.endEditing(true)
+    }
     
+    @objc func keyboardWillChange(notification: Notification){
+        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification{
+            self.view.frame.origin.y = -keyboardRect.height
+        } else {
+            self.view.frame.origin.y = 0
+        }
+    }
 }

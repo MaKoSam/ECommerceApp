@@ -7,10 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
-class User: Codable {
-    var username: String = ""
-    var email: String = ""
+class User: Object {
+    @objc dynamic var username = ""
+    @objc dynamic var email = ""
+    @objc dynamic var accessToken = ""
+    @objc dynamic var refreshToken = ""
+    @objc dynamic var expires = 0
+}
+
+class UserResponse: Codable {
+    var username: String?
+    var email: String?
     var accessToken: String?
     var refreshToken: String?
     var expires: Int?

@@ -30,22 +30,22 @@ final class RegisterControllerBuilder {
         controller.view.addSubview(controller.headline)
         
         controller.usernameView.backgroundColor = theme.secondBackgroundColor
-        controller.usernameView.layer.cornerRadius = theme.cornerRadius
+        controller.usernameView.layer.cornerRadius = theme.viewCornerRadius
         controller.usernameView.translatesAutoresizingMaskIntoConstraints = false
         controller.view.addSubview(controller.usernameView)
     
         controller.emailView.backgroundColor = theme.secondBackgroundColor
-        controller.emailView.layer.cornerRadius = theme.cornerRadius
+        controller.emailView.layer.cornerRadius = theme.viewCornerRadius
         controller.emailView.translatesAutoresizingMaskIntoConstraints = false
         controller.view.addSubview(controller.emailView)
         
         controller.passwordView.backgroundColor = theme.secondBackgroundColor
-        controller.passwordView.layer.cornerRadius = theme.cornerRadius
+        controller.passwordView.layer.cornerRadius = theme.viewCornerRadius
         controller.passwordView.translatesAutoresizingMaskIntoConstraints = false
         controller.view.addSubview(controller.passwordView)
         
         controller.passwordRepeatView.backgroundColor = theme.secondBackgroundColor
-        controller.passwordRepeatView.layer.cornerRadius = theme.cornerRadius
+        controller.passwordRepeatView.layer.cornerRadius = theme.viewCornerRadius
         controller.passwordRepeatView.translatesAutoresizingMaskIntoConstraints = false
         controller.view.addSubview(controller.passwordRepeatView)
         
@@ -111,7 +111,7 @@ final class RegisterControllerBuilder {
         controller.registerButton.setTitleColor(theme.textColorWhite, for: .normal)
         controller.registerButton.backgroundColor = theme.buttonColor
         controller.registerButton.translatesAutoresizingMaskIntoConstraints = false
-        controller.registerButton.layer.cornerRadius = 25.0
+        controller.registerButton.layer.cornerRadius = theme.buttonCornerRadius
         controller.view.addSubview(controller.registerButton)
         
         controller.transferToLoginButton.setTitle(Session.shared.translations["transferToSignInBut"], for: .normal)

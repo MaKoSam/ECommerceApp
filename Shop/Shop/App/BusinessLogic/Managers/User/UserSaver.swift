@@ -7,25 +7,38 @@
 //
 
 import Foundation
+import RealmSwift
 
 final class UserSaver {
-    func getUserFromCache() -> User? {
-        let decoder = JSONDecoder()
-        let cacheFolder = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
-        let userFolder = cacheFolder.appendingPathComponent("user.txt")
-        let data = FileManager.default.contents(atPath: userFolder.path)
-        guard let executedData = data else {
+    func getUser() -> User? {
+        do {
+            let realm = try! Realm()
+            let user = realm.objects(User.self).first
+            return user
+        } catch {
             return nil
         }
-        return try? decoder.decode(User.self, from: executedData)
     }
     
-    func saveUserToCache(user: User) {
-        let encoder = JSONEncoder()
-        if let encodedData = try? encoder.encode(user) {
-            let cacheFolder = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
-            let userFolder = cacheFolder.appendingPathComponent("user.txt")
-            let _ = FileManager.default.createFile(atPath: userFolder.path, contents: encodedData)
+    func saveUser(user: User) {
+        do {
+            let realm = try! Realm()
+            print(realm.configuration.fileURL)
+            try realm.write {
+                realm.deleteAll()
+                realm.add(user)
+            }
+        } catch {
+        }
+    }
+    
+    func deleteUser() {
+        do {
+            let realm = try! Realm()
+            try realm.write {
+                realm.deleteAll()
+            }
+        } catch {
         }
     }
 }

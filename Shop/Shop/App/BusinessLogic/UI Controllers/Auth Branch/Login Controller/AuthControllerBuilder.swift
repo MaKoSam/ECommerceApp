@@ -30,12 +30,12 @@ class AuthControllerBuilder: NSObject {
         controller.view.addSubview(controller.headline)
         
         controller.usernameView.backgroundColor = theme.secondBackgroundColor
-        controller.usernameView.layer.cornerRadius = theme.cornerRadius
+        controller.usernameView.layer.cornerRadius = theme.viewCornerRadius
         controller.usernameView.translatesAutoresizingMaskIntoConstraints = false
         controller.view.addSubview(controller.usernameView)
         
         controller.passwordView.backgroundColor = theme.secondBackgroundColor
-        controller.passwordView.layer.cornerRadius = theme.cornerRadius
+        controller.passwordView.layer.cornerRadius = theme.viewCornerRadius
         controller.passwordView.translatesAutoresizingMaskIntoConstraints = false
         controller.view.addSubview(controller.passwordView)
         
@@ -69,7 +69,7 @@ class AuthControllerBuilder: NSObject {
         controller.signInButton.setTitleColor(theme.textColorWhite, for: .normal)
         controller.signInButton.backgroundColor = theme.buttonColor
         controller.signInButton.translatesAutoresizingMaskIntoConstraints = false
-        controller.signInButton.layer.cornerRadius = 25.0
+        controller.signInButton.layer.cornerRadius = theme.buttonCornerRadius
         controller.view.addSubview(controller.signInButton)
         
         return controller

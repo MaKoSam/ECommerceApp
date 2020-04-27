@@ -65,6 +65,8 @@ class RegisterViewController: UIViewController {
 }
 
 
+
+//RegisterActions
 extension RegisterViewController{
     @objc func startEditingField(_ sender: UITextField){
         sender.text = nil
@@ -76,21 +78,21 @@ extension RegisterViewController{
             let passwordOne = self.passwordField.text,
             let passwordTwo = self.passwordRepeatField.text,
             let email = self.emailField.text else {
-                showError()
+                showError(message: "Заполните все поля")
                 return
         }
         
         if checkPasswords(first: passwordOne, second: passwordTwo){
             registrator.signUp(with: username, password: passwordOne, email: email){ user in
                 guard let user = user else {
-                    self.showError()
+                    self.showError(message: "Логин уже занят")
                     return
                 }
                 DispatchQueue.global(qos: .background).async {
-                    print("Turning to saving", user)
                     Session.shared.setUser(user)
                     let userManager = UserManager()
                     userManager.saveUser(user: user)
+                    
                     DispatchQueue.main.async {
                         AppDelegate.shared.rootViewController.showMainBranch() //Навигация до магазина
                     }
@@ -102,17 +104,17 @@ extension RegisterViewController{
     
     private func checkPasswords(first: String, second: String) -> Bool{
         if first.hashValue != second.hashValue || first.count < 6{
-            showError()
+            showError(message: "Пароли не совпадают")
             return false
         }
         return true
     }
     
-    private func showError(error: Error? = nil){
-        var errorMessage: String?
-        if error == nil {
+    private func showError(error: Error? = nil, message: String? = nil){
+        var errorMessage = message
+        if error == nil && message == nil {
             errorMessage = "Username is bad formatted or already taken. Password must be 6 or more symbols."
-        } else {
+        } else if message == nil {
             errorMessage = error?.localizedDescription
         }
         let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)

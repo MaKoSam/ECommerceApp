@@ -6,6 +6,7 @@ target 'Shop' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'RealmSwift'
 
   target 'ShopTests' do
     inherit! :search_paths

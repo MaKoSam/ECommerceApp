@@ -15,9 +15,25 @@ final class AuthNetworkManager {
                           "password": password]
         let request = AF.request("http://localhost:8080/auth/sign_in", method: .post, parameters: parameters)
         
-        request.responseDecodable(of: User.self){ result in
+        request.responseDecodable(of: UserResponse.self){ result in
             if result.error == nil {
-                completionHandler(result.value)
+                guard let username = result.value?.username,
+                    let email = result.value?.email,
+                    let accessToken = result.value?.accessToken,
+                    let refreshToken = result.value?.refreshToken,
+                    let expires = result.value?.expires else {
+                        completionHandler(nil)
+                        return
+                }
+                let user = User()
+                user.username = username
+                user.email = email
+                user.accessToken = accessToken
+                user.refreshToken = refreshToken
+                user.expires = expires
+                
+                completionHandler(user)
+                return
             }
             completionHandler(nil)
         }
@@ -29,9 +45,25 @@ final class AuthNetworkManager {
                           "email": email]
         let request = AF.request("http://localhost:8080/auth/register", method: .post, parameters: parameters)
         
-        request.responseDecodable(of: User.self){ result in
+        request.responseDecodable(of: UserResponse.self){ result in
             if result.error == nil {
-                completionHandler(result.value)
+                guard let username = result.value?.username,
+                    let email = result.value?.email,
+                    let accessToken = result.value?.accessToken,
+                    let refreshToken = result.value?.refreshToken,
+                    let expires = result.value?.expires else {
+                        completionHandler(nil)
+                        return
+                }
+                let user = User()
+                user.username = username
+                user.email = email
+                user.accessToken = accessToken
+                user.refreshToken = refreshToken
+                user.expires = expires
+                
+                completionHandler(user)
+                return
             }
             completionHandler(nil)
         }

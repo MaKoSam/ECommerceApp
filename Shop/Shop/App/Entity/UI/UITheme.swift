@@ -19,23 +19,25 @@ class UITheme: NSObject {
     var textColorBlack: UIColor
     var secondTextColor: UIColor
 
-    var cornerRadius: CGFloat
+    var viewCornerRadius: CGFloat
+    var buttonCornerRadius: CGFloat
     
     var fontBig: UIFont
     var fontMedium: UIFont
     var fontSmall: UIFont
     
-    init(backgroundColor: UIColor, buttonColor: UIColor, textColor: UIColor, font: UIFont){
-        self.backgroundColor = backgroundColor
-        self.secondBackgroundColor = backgroundColor
-        self.buttonColor = buttonColor
-        self.secondButtonColor = buttonColor
+    override init(){
+        self.backgroundColor = UIColor()
+        self.secondBackgroundColor = UIColor()
+        self.buttonColor = UIColor()
+        self.secondButtonColor = UIColor()
         self.textColorWhite = UIColor.white
         self.textColorBlack = UIColor.black
-        self.secondTextColor = textColor
-        self.fontBig = font
-        self.fontMedium = font
-        self.fontSmall = font
-        self.cornerRadius = 5.0
+        self.secondTextColor = UIColor()
+        self.viewCornerRadius = 5.0
+        self.buttonCornerRadius = 25.0
+        self.fontBig = UIFont()
+        self.fontSmall = UIFont()
+        self.fontMedium = UIFont()
     }
 }
