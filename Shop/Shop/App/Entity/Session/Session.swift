@@ -29,6 +29,10 @@ class Session {
         return user.accessToken
     }
     
+    func refreshToken() -> String {
+        return user.refreshToken
+    }
+    
     func setUser(_ user: User){
         self.user = user
     }

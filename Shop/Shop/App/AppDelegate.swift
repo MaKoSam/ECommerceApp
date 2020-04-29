@@ -28,7 +28,7 @@ extension AppDelegate{
         return UIApplication.shared.delegate as! AppDelegate
     }
     var rootViewController: RootViewController{
-        return window!.rootViewController as! RootViewController
+        return window?.rootViewController as! RootViewController
     }
 }
 

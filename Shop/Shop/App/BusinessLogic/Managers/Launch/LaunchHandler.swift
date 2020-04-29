@@ -9,9 +9,45 @@
 import Foundation
 
 final class LaunchHandler {
-    func prepareForLaunch(completionHandler: @escaping() -> Void){
+    
+    func launch(withUser user: Bool,completionHandler: @escaping(Bool) -> Void) {
         self.configureTranslations()
         self.configureUITheme()
+        
+        if user {
+            self.refreshUserToken { isSuccess in
+                if isSuccess {
+                    self.getItems {
+                        completionHandler(true)
+                        return
+                    }
+                }
+                completionHandler(false)
+                return
+            }
+        }
+        
+        completionHandler(true)
+    }
+    
+    private func refreshUserToken(completionHandler: @escaping(Bool) -> Void) {
+        let authNetworkManager = AuthNetworkManager()
+        authNetworkManager.refreshToken(with: Session.shared.refreshToken()){ updatedUser in
+            guard let user = updatedUser else {
+                completionHandler(false)
+                return
+            }
+            Session.shared.setUser(user)
+            completionHandler(true)
+            
+            DispatchQueue.global(qos: .background).async {
+                let userManager = UserManager()
+                userManager.saveUser(user: user)
+            }
+        }
+    }
+    
+    private func getItems(completionHandler: @escaping() -> Void) {
         ShopItemManager.shared.requestShopItems(page: 1){
             completionHandler()
         }

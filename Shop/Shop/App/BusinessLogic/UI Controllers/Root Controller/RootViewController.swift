@@ -62,7 +62,8 @@ class RootViewController: UIViewController {
     }
     
     func showLogoutBranch() {
-        //log out
+        let userManager = UserManager()
+        userManager.logout()
     }
 
 }

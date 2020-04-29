@@ -68,4 +68,33 @@ final class AuthNetworkManager {
             completionHandler(nil)
         }
     }
+    
+    func refreshToken(with refreshToken: String, completionHandler: @escaping (User?) -> Void) {
+        let parameters = ["refreshToken": refreshToken]
+        let request = AF.request("http://localhost:8080/auth/refresh_token", method: .post, parameters: parameters)
+        
+        request.responseDecodable(of: UserResponse.self){ result in
+            if result.error == nil {
+                guard let username = result.value?.username,
+                    let email = result.value?.email,
+                    let accessToken = result.value?.accessToken,
+                    let refreshToken = result.value?.refreshToken,
+                    let expires = result.value?.expires else {
+                        completionHandler(nil)
+                        return
+                }
+                let user = User()
+                user.username = username
+                user.email = email
+                user.accessToken = accessToken
+                user.refreshToken = refreshToken
+                user.expires = expires
+                
+                completionHandler(user)
+                return
+            }
+            completionHandler(nil)
+        }
+        
+    }
 }

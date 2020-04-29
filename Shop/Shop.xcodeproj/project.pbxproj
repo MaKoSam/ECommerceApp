@@ -13,6 +13,11 @@
 		0423FC4B244B1B350075E6A3 /* DefaultAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423FC4A244B1B350075E6A3 /* DefaultAddress.swift */; };
 		0423FC4D244B1F330075E6A3 /* AddressUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423FC4C244B1F330075E6A3 /* AddressUpdater.swift */; };
 		0423FC50244B1F4E0075E6A3 /* AddressSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423FC4F244B1F4E0075E6A3 /* AddressSaver.swift */; };
+		043A68C92459616E0096D76C /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A68C82459616E0096D76C /* PlayerView.swift */; };
+		043A68CC2459618E0096D76C /* VideoPalyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A68CB2459618E0096D76C /* VideoPalyer.swift */; };
+		043A690E2459901E0096D76C /* LaunchVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 043A690D2459901E0096D76C /* LaunchVideo.mp4 */; };
+		044E80B42458152600DE224F /* HeadlineCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E80B32458152600DE224F /* HeadlineCategoryViewController.swift */; };
+		044E80B72458155700DE224F /* HeadlineCategoryControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E80B62458155700DE224F /* HeadlineCategoryControllerBuilder.swift */; };
 		046647EC2457325800F330D6 /* ShopItemNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046647EB2457325800F330D6 /* ShopItemNetworkManager.swift */; };
 		046647EF245736D900F330D6 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046647EE245736D900F330D6 /* ShopViewController.swift */; };
 		047BF0B924549149008BB525 /* AuthNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BF0B824549149008BB525 /* AuthNetworkManager.swift */; };
@@ -77,6 +82,11 @@
 		0423FC4A244B1B350075E6A3 /* DefaultAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAddress.swift; sourceTree = "<group>"; };
 		0423FC4C244B1F330075E6A3 /* AddressUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressUpdater.swift; sourceTree = "<group>"; };
 		0423FC4F244B1F4E0075E6A3 /* AddressSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSaver.swift; sourceTree = "<group>"; };
+		043A68C82459616E0096D76C /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		043A68CB2459618E0096D76C /* VideoPalyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPalyer.swift; sourceTree = "<group>"; };
+		043A690D2459901E0096D76C /* LaunchVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaunchVideo.mp4; sourceTree = "<group>"; };
+		044E80B32458152600DE224F /* HeadlineCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineCategoryViewController.swift; sourceTree = "<group>"; };
+		044E80B62458155700DE224F /* HeadlineCategoryControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineCategoryControllerBuilder.swift; sourceTree = "<group>"; };
 		046647EB2457325800F330D6 /* ShopItemNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemNetworkManager.swift; sourceTree = "<group>"; };
 		046647EE245736D900F330D6 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		047BF0B824549149008BB525 /* AuthNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkManager.swift; sourceTree = "<group>"; };
@@ -184,6 +194,24 @@
 			path = Address;
 			sourceTree = "<group>";
 		};
+		043A68C7245961560096D76C /* Video Player */ = {
+			isa = PBXGroup;
+			children = (
+				043A68C82459616E0096D76C /* PlayerView.swift */,
+				043A68CB2459618E0096D76C /* VideoPalyer.swift */,
+			);
+			path = "Video Player";
+			sourceTree = "<group>";
+		};
+		044E80B52458153300DE224F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				044E80B32458152600DE224F /* HeadlineCategoryViewController.swift */,
+				044E80B62458155700DE224F /* HeadlineCategoryControllerBuilder.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		046647EA2457323300F330D6 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +223,7 @@
 		046647ED2457369C00F330D6 /* Shop Branch */ = {
 			isa = PBXGroup;
 			children = (
+				044E80B52458153300DE224F /* Category */,
 				046647EE245736D900F330D6 /* ShopViewController.swift */,
 			);
 			path = "Shop Branch";
@@ -322,6 +351,7 @@
 			children = (
 				04A24913244AEE960043C500 /* Assets.xcassets */,
 				04A24915244AEE960043C500 /* LaunchScreen.storyboard */,
+				043A690D2459901E0096D76C /* LaunchVideo.mp4 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -411,6 +441,7 @@
 		04BA249524517AE4005939A2 /* Launch Controller */ = {
 			isa = PBXGroup;
 			children = (
+				043A68C7245961560096D76C /* Video Player */,
 				04BA249624517B03005939A2 /* LaunchViewController.swift */,
 				04BA249B24517D4C005939A2 /* LaunchControllerBuilder.swift */,
 			);
@@ -680,6 +711,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043A690E2459901E0096D76C /* LaunchVideo.mp4 in Resources */,
 				04A24917244AEE960043C500 /* LaunchScreen.storyboard in Resources */,
 				04A24914244AEE960043C500 /* Assets.xcassets in Resources */,
 				04BA2476244C3987005939A2 /* GoogleService-Info.plist in Resources */,
@@ -816,6 +848,7 @@
 				0423FC46244B17950075E6A3 /* Address.swift in Sources */,
 				046647EF245736D900F330D6 /* ShopViewController.swift in Sources */,
 				04BA249724517B03005939A2 /* LaunchViewController.swift in Sources */,
+				043A68CC2459618E0096D76C /* VideoPalyer.swift in Sources */,
 				04D072652456F9EC00DDA4B1 /* ShopCartManager.swift in Sources */,
 				04BA249C24517D4C005939A2 /* LaunchControllerBuilder.swift in Sources */,
 				04D072622456F91300DDA4B1 /* ShopCart.swift in Sources */,
@@ -834,13 +867,16 @@
 				04D0726B2457016900DDA4B1 /* ShopItemManager.swift in Sources */,
 				04BA2481244DA69C005939A2 /* RegisterControllerBuilder.swift in Sources */,
 				04BA249A24517C19005939A2 /* LaunchHandler.swift in Sources */,
+				043A68C92459616E0096D76C /* PlayerView.swift in Sources */,
 				0423FC4B244B1B350075E6A3 /* DefaultAddress.swift in Sources */,
+				044E80B72458155700DE224F /* HeadlineCategoryControllerBuilder.swift in Sources */,
 				04BA2478244C943D005939A2 /* AuthViewController.swift in Sources */,
 				04BA247F244DA3CE005939A2 /* RegisterViewController.swift in Sources */,
 				04BA2466244B48DC005939A2 /* User.swift in Sources */,
 				04D4828B2455DE3D00B7050D /* DefaultTheme.swift in Sources */,
 				046647EC2457325800F330D6 /* ShopItemNetworkManager.swift in Sources */,
 				0423FC43244B15C90075E6A3 /* RootViewController.swift in Sources */,
+				044E80B42458152600DE224F /* HeadlineCategoryViewController.swift in Sources */,
 				0423FC4D244B1F330075E6A3 /* AddressUpdater.swift in Sources */,
 				04BA248B24502D2C005939A2 /* English.swift in Sources */,
 				04A2490B244AEE8D0043C500 /* AppDelegate.swift in Sources */,
