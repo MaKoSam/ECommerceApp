@@ -45,5 +45,10 @@ class Russian {
         //Function buttons
         dictionary.updateValue("Обновить", forKey: "update")
         dictionary.updateValue("В корзину", forKey: "buy")
+        
+        //Shop
+        dictionary.updateValue("Магазин", forKey: "shop")
+        dictionary.updateValue("Поиск", forKey: "search")
+        dictionary.updateValue("Корзина", forKey: "shopcart")
     }
 }

@@ -45,5 +45,10 @@ class English {
         //Function buttons
         dictionary.updateValue("Update", forKey: "update")
         dictionary.updateValue("Add to cart", forKey: "buy")
+        
+        //Shop
+        dictionary.updateValue("Products", forKey: "shop")
+        dictionary.updateValue("Search", forKey: "search")
+        dictionary.updateValue("Shopping cart", forKey: "shopcart")
     }
 }
