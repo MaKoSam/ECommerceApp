@@ -13,7 +13,12 @@ final class ShopItem: Codable {
     var name: String
     var price: Int
 //    var description: String
-    var tags: [Int]?
-    var colors: [Int]?
-    var sizes: [Int]?
+    var category: [Category]?
+    var colors: [Color]?
+    var sizes: [Size]?
+    
+    init() {
+        name = ""
+        price = 0
+    }
 }

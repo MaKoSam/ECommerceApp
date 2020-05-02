@@ -9,16 +9,17 @@
 import Foundation
 
 final class Authorizator {
-    private let networkConnection = AuthNetworkManager()
-    
     func signIn(with username: String, password: String, completionHandler: @escaping (User?) -> Void) {
+        let networkConnection = AuthNetworkManager()
         networkConnection.signIn(with: username, password: password) { user in
             completionHandler(user)
         }
     }
     
-    func refreshToken(for user: User, completionHandler: @escaping (User?) -> Void) {
-        completionHandler(nil)
+    func refreshToken(with refreshToken: String, completionHandler: @escaping (User?) -> Void) {
+        let networkConnection = AuthNetworkManager()
+        networkConnection.refreshToken(with: refreshToken) { user in
+            completionHandler(user)
+        }
     }
-
 }

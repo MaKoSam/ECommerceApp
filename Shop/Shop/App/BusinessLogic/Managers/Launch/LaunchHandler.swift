@@ -5,50 +5,36 @@
 //  Created by Sam Mazniker on 23/04/2020.
 //  Copyright © 2020 Sam Mazniker. All rights reserved.
 //
+//  configure session
 
 import Foundation
 
 final class LaunchHandler {
-    
-    func launch(withUser user: Bool,completionHandler: @escaping(Bool) -> Void) {
+    func launch(completionHandler: @escaping() -> Void) {
         self.configureTranslations()
         self.configureUITheme()
-        
-        if user {
-            self.refreshUserToken { isSuccess in
-                if isSuccess {
-                    self.getItems {
-                        completionHandler(true)
-                        return
-                    }
-                }
-                completionHandler(false)
-                return
-            }
-        }
-        
-        completionHandler(true)
+        completionHandler()
     }
     
-    private func refreshUserToken(completionHandler: @escaping(Bool) -> Void) {
-        let authNetworkManager = AuthNetworkManager()
-        authNetworkManager.refreshToken(with: Session.shared.refreshToken()){ updatedUser in
-            guard let user = updatedUser else {
+    func refreshUser(completionHandler: @escaping (Bool) -> Void) {
+        let authorizator = Authorizator()
+        authorizator.refreshToken(with: Session.shared.refreshToken()){ user in
+            guard let user = user else {
                 completionHandler(false)
                 return
             }
             Session.shared.setUser(user)
-            completionHandler(true)
-            
             DispatchQueue.global(qos: .background).async {
                 let userManager = UserManager()
                 userManager.saveUser(user: user)
             }
+            completionHandler(true)
         }
     }
+ 
     
-    private func getItems(completionHandler: @escaping() -> Void) {
-        ShopItemManager.shared.requestShopItems(page: 1){
+    func configureShop(completionHandler: @escaping() -> Void) {
+        Session.shared.shopManager.configureShop {
             completionHandler()
         }
     }

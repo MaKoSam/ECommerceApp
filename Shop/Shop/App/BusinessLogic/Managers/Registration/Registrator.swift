@@ -9,9 +9,8 @@
 import Foundation
 
 final class Registrator {
-    private let networkConnection = AuthNetworkManager()
-    
     func signUp(with username: String, password: String, email: String, completionHandler: @escaping(User?) -> Void){
+        let networkConnection = AuthNetworkManager()
         networkConnection.signUp(with: username, password: password, email: email) { user in
             completionHandler(user)
         }

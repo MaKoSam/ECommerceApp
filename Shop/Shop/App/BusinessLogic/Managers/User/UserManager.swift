@@ -23,18 +23,7 @@ final class UserManager {
         saver.saveUser(user: user)
     }
     
-    func logout(){
+    func logout() {
         saver.deleteUser()
-    }
-    
-    private func makeUser() -> User{
-        return User()
-    }
-    
-    private func makeDefaultUser() -> User{
-        let user = makeUser()
-        user.username = "Guest"
-        user.email = "not@email.ru"
-        return user
     }
 }

@@ -15,6 +15,7 @@ class Session {
     private var user = User()
     var theme: UITheme = DefaultTheme()
     var translations = [String: String]()
+    let shopManager = ShopManager()
     
     func needAuth() -> Bool{
         let userBuilder = UserManager()

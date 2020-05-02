@@ -68,13 +68,13 @@ extension AuthViewController {
                 self.showError()
                 return
             }
-            DispatchQueue.global(qos: .background).async {
+            DispatchQueue.main.async {
                 Session.shared.setUser(user)
+                AppDelegate.shared.rootViewController.showMainBranch() //Навигация до магазина
+            }
+            DispatchQueue.global(qos: .background).async {
                 let userManager = UserManager()
                 userManager.saveUser(user: user)
-                DispatchQueue.main.async {
-                    AppDelegate.shared.rootViewController.showMainBranch() //Навигация до магазина
-                }
             }
         }
     }

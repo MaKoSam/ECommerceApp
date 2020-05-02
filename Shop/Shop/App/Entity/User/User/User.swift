@@ -16,11 +16,3 @@ class User: Object {
     @objc dynamic var refreshToken = ""
     @objc dynamic var expires = 0
 }
-
-class UserResponse: Codable {
-    var username: String?
-    var email: String?
-    var accessToken: String?
-    var refreshToken: String?
-    var expires: Int?
-}
